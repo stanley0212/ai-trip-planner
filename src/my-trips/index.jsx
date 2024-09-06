@@ -15,10 +15,10 @@ function MyTrips() {
     const GetUserTrips = async() => {
         const user = JSON.parse(localStorage.getItem('user'))
         
-        if(!user){
-            navigation('/')
-            return
-        }
+        // if(!user){
+        //     navigation('/')
+        //     return
+        // }
         
         const q = query(collection(db, "AITrips"), where("userEmail", "==", user?.email));
 
