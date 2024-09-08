@@ -12,19 +12,19 @@ import MyTrips from './my-trips/index.jsx'
 
 const router = createBrowserRouter([
   {
-    path: "https://ai-trip-planner-1tox.vercel.app/",
+    path: "/",
     element: <App />
   },
   {
-    path:'https://ai-trip-planner-1tox.vercel.app/create-trip',
+    path:'/create-trip',
     element: <CreateTrip />
   },
   {
-    path:'https://ai-trip-planner-1tox.vercel.app/view-trip/:tripId',
+    path:'/view-trip/:tripId',
     element: <Viewtrip />
   },
   {
-    path:'https://ai-trip-planner-1tox.vercel.app/my-trips',
+    path:'/my-trips',
     element: <MyTrips />
   }
 ])
