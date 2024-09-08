@@ -64,6 +64,7 @@ function CreateTrip() {
     .replace('{traveler}', formDate?.traveler)
     .replace('{budget}', formDate?.budget)
     .replace('{totalDays}', formDate?.noOfDays)
+    .replace('{attractions}', formDate?.attractions)
 
     const result = await chatSession.sendMessage(FINAL_PROMPT)
     console.log("--",result?.response?.text())
@@ -116,6 +117,10 @@ function CreateTrip() {
         <div>
           <h2 className='text-xl my-3 font-medium'>How many days are you planning your trip?</h2>
           <Input placeholder={'Ex.3'} type='number' onChange={(e)=> handleInputChange('noOfDays', e.target.value)} />
+        </div>
+        <div>
+          <h2 className='text-xl my-3 font-medium'>Description your trip attractions</h2>
+          <Input placeholder={'Ex: beach, fishing, shopping'} type='text' onChange={(e)=> handleInputChange('attractions', e.target.value)} />
         </div>
       </div>
       <div>
